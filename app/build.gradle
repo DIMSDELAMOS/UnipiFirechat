@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+
+    // ΧΡΗΣΙΜΟΠΟΙΗΣΕ ΤΗΝ ΑΠΛΗ ΣΥΝΤΑΞΗ ID ΕΔΩ
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.unipifirechat'
+    compileSdk {
+        version = release(36)
+    }
+
+    defaultConfig {
+        applicationId "com.example.unipifirechat"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    // ΒΑΣΙΚΑ ΣΥΣΤΑΤΙΚΑ ANDROID
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // 1. FIREBASE PLATFORM (BOM)
+    implementation platform('com.google.firebase:firebase-bom:34.6.0')
+    // 2. FIREBASE AUTHENTICATION & DATABASE
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // 3. ΠΡΟΣΘΗΚΗ: RECYCLERVIEW (Απαραίτητο για τα Activities)
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // 4. ΠΡΟΣΘΗΚΗ: MULTIDEX (Απαραίτητο για το μέγεθος του Firebase SDK)
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Δοκιμές
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

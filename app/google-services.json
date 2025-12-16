@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "781503192160",
+    "firebase_url": "https://unipifirechat-project-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "unipifirechat-project",
+    "storage_bucket": "unipifirechat-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781503192160:android:9ec0f004b63a7b1a57b705",
+        "android_client_info": {
+          "package_name": "com.example.unipifirechat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrLkCTuspwbn4y7csEIFildI6n1b83Gv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
