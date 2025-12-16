@@ -28,3 +28,4 @@
 4.  Build and Run on an Emulator or Physical Device.
 
 ---
+*Developed for the University of Piraeus*
